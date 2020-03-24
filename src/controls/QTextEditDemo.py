@@ -21,35 +21,35 @@ class QTextEditDemo(QWidget) :
         self.buttonText = QPushButton('显示文本')
         self.buttonHTML = QPushButton('显示HTML')
 
-        self.buttonToText = QPushButton('获取文本')
-        self.buttonToHTML = QPushButton('获取HTML')
+        self.buttonShowText = QPushButton('获取文本')
+        self.buttonShowHTML = QPushButton('获取HTML')
 
 
         layout = QVBoxLayout()
         layout.addWidget(self.textEdit)
         layout.addWidget(self.buttonText)
-        layout.addWidget(self.buttonToText)
+        layout.addWidget(self.buttonShowText)
         layout.addWidget(self.buttonHTML)
-        layout.addWidget(self.buttonToHTML)
+        layout.addWidget(self.buttonShowHTML)
 
         self.setLayout(layout)
 
         self.buttonText.clicked.connect(self.onClick_ButtonText)
         self.buttonHTML.clicked.connect(self.onClick_ButtonHTML)
 
-        self.buttonToText.clicked.connect(self.onClick_ButtonToText)
-        self.buttonToHTML.clicked.connect(self.onClick_ButtonToHTML)
+        self.buttonShowText.clicked.connect(self.onClick_ButtonToText)
+        self.buttonShowHTML.clicked.connect(self.onClick_ButtonToHTML)
 
     def onClick_ButtonText(self):
-        self.textEdit.setPlainText('Hello World，世界你好吗？')
+        self.textEdit.setPlainText('Hello World，世界你好吗？')           # 设置文字
 
     def onClick_ButtonToText(self):
-        print(self.textEdit.toPlainText())
+        print(self.textEdit.toPlainText())                               # 获取文字，在控制台打印出来
 
-    def onClick_ButtonHTML(self):
+    def onClick_ButtonHTML(self):                                        # 设置HTML
         self.textEdit.setHtml('<font color="blue" size="5">Hello World</font>')
-    def onClick_ButtonToHTML(self):
-        print(self.textEdit.toHtml())
+    def onClick_ButtonToHTML(self):                                      # 获取HTML
+        print(self.textEdit.toHtml())   
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
