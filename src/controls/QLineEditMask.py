@@ -40,7 +40,7 @@ class QLineEditMask(QWidget) :
         dateLineEdit = QLineEdit()
         licenseLineEdit = QLineEdit()
         # 192.168.21.45
-        ipLineEdit.setInputMask('000.000.000.000;_')
+        ipLineEdit.setInputMask('000.000.000.000;_')                        # _为提示    
         macLineEdit.setInputMask('HH:HH:HH:HH:HH:HH;_')
         dateLineEdit.setInputMask('0000-00-00')
         licenseLineEdit.setInputMask('>AAAAA-AAAAA-AAAAA-AAAAA-AAAAA;#')
@@ -50,7 +50,7 @@ class QLineEditMask(QWidget) :
         formLayout.addRow('日期掩码',dateLineEdit)
         formLayout.addRow('许可证掩码',licenseLineEdit)
 
-        self.setLayout(formLayout)                          # 应用布局
+        self.setLayout(formLayout)                                          # 应用布局
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
