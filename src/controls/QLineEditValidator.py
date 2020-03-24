@@ -57,7 +57,7 @@ class QLineEditValidator(QWidget):
         doubleLineEdit.setValidator(doubleValidator)
         validatorLineEdit.setValidator(validator)
 
-        self.setLayout(formLayout)
+        self.setLayout(formLayout)                                              # 应用表单布局
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     main = QLineEditValidator()
