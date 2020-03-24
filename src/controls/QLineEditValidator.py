@@ -47,7 +47,7 @@ class QLineEditValidator(QWidget):
         doubleValidator.setDecimals(2)
 
         # 字符和数字
-        reg = QRegExp('[a-zA-z0-9]+$')                                          # 大小写以及数字
+        reg = QRegExp('[a-zA-Z0-9]+$')                                          # 大小写以及数字
         validator = QRegExpValidator(self)
         validator.setRegExp(reg)
 
