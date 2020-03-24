@@ -42,12 +42,12 @@ class QLineEditValidator(QWidget):
         # 浮点校验器 [-360,360]，精度：小数点后2位
         doubleValidator = QDoubleValidator(self)
         doubleValidator.setRange(-360,360)
-        doubleValidator.setNotation(QDoubleValidator.StandardNotation)
+        doubleValidator.setNotation(QDoubleValidator.StandardNotation)          # 设置显示类型
         # 设置精度，小数点2位
         doubleValidator.setDecimals(2)
 
         # 字符和数字
-        reg = QRegExp('[a-zA-z0-9]+$')
+        reg = QRegExp('[a-zA-z0-9]+$')                                          # 大小写以及数字
         validator = QRegExpValidator(self)
         validator.setRegExp(reg)
 
