@@ -49,8 +49,8 @@ class QPushButtonDemo(QDialog) :
         layout.addWidget(self.button3)
 
         self.button4 = QPushButton('&MyButton')
-        self.button4.setDefault(True)
-        self.button4.clicked.connect(lambda:self.whichButton(self.button4))
+        self.button4.setDefault(True)                                        # 此属性确认按钮是否为默认按钮，如果按钮被设置为默认按钮，当按下回车键时，此属性设置为True的按钮（即对话框的默认按钮）将自动被按下。
+        self.button4.clicked.connect(lambda:self.whichButton(self.button4))   # 设置默认按钮https://blog.csdn.net/LaoYuanPython/article/details/102904862
         layout.addWidget(self.button4)
 
         self.setLayout(layout)
