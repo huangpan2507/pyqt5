@@ -2,8 +2,8 @@
 
 按钮控件（QPushButton）
 
-QAbstractButton
-
+父类：QAbstractButton
+以下为子类：
 QPushButton
 AToolButton
 QRadioButton
