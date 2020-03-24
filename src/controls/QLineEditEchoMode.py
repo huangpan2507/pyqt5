@@ -34,14 +34,14 @@ class QLineEditEchoMode(QWidget) :
         passwordLineEdit = QLineEdit()
         passwordEchoOnEditLineEdit = QLineEdit()
 
-        formLayout.addRow("Normal",normalLineEdit)
+        formLayout.addRow("Normal",normalLineEdit)                
         formLayout.addRow("NoEcho", noEchoLineEdit)
         formLayout.addRow("Password",passwordLineEdit)
         formLayout.addRow("PasswordEchoOnEdit",passwordEchoOnEditLineEdit)
 
         # placeholdertext
 
-        normalLineEdit.setPlaceholderText("Normal")
+        normalLineEdit.setPlaceholderText("Normal")             # 设置文本框提示文字
         noEchoLineEdit.setPlaceholderText("NoEcho")
         passwordLineEdit.setPlaceholderText("Password")
         passwordEchoOnEditLineEdit.setPlaceholderText("PasswordEchoOnEdit")
