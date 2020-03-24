@@ -50,7 +50,7 @@ class QLineEditMask(QWidget) :
         formLayout.addRow('日期掩码',dateLineEdit)
         formLayout.addRow('许可证掩码',licenseLineEdit)
 
-        self.setLayout(formLayout)
+        self.setLayout(formLayout)                          # 应用布局
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
