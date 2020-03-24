@@ -51,7 +51,7 @@ class QLineEditEchoMode(QWidget) :
         passwordLineEdit.setEchoMode(QLineEdit.Password)
         passwordEchoOnEditLineEdit.setEchoMode(QLineEdit.PasswordEchoOnEdit)
 
-        self.setLayout(formLayout)
+        self.setLayout(formLayout)                                 # <b 应用布局 /b>
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
