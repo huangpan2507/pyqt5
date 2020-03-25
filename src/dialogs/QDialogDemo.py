@@ -1,4 +1,5 @@
 '''
+代码分析博客： https://blog.csdn.net/jia666666/article/details/81539733?utm_source=blogxgwz1
 
 对话框：QDialog
 
@@ -8,9 +9,9 @@ QFileDialog
 QFontDialog
 QInputDialog
 
-QMainWindow
-QWidget
-QDialog
+QMainWindow ： 基本对话框上增加了菜单栏， 工具栏， 状态栏， 标题栏
+QWidget ： 基本框口
+QDialog ： 对话窗框口
 
 '''
 
@@ -39,6 +40,10 @@ class QDialogDemo(QMainWindow):
         button.move(50,50)
         dialog.setWindowTitle('对话框')
         dialog.setWindowModality(Qt.ApplicationModal)
+        
+        # Qt.ApplicationModal： Qt.ApplicationModal：应用程序模态，阻止和任何其他窗口进行交互，用户只有关闭弹窗后，才能关闭主界面
+        # Qt.WindowModal:窗口模态，程序在未处理玩当前对话框时，将阻止和对话框的父窗口进行交互，可以直接关闭主界面，而不用先关闭弹窗
+        # Qt.NonModal：非模态，可以和程序的其他窗口进行交互，用户只有关闭弹窗后，才能关闭主界面
 
         dialog.exec()
 
