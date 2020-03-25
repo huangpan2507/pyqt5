@@ -8,6 +8,11 @@
 3. 警告对话框
 4. 提问对话框
 5. 消息对话框
+    QMessageBox.information 信息框
+　　QMessageBox.question 问答框
+　　QMessageBox.warning 警告
+　　QMessageBox.ctitical危险
+　　QMessageBox.about 关于
 
 
 有2点差异
