@@ -60,7 +60,8 @@ class QMessageBoxDemo(QWidget):
     def showDialog(self):
         text = self.sender().text()
         if text == '显示关于对话框':
-            QMessageBox.about(self,'关于','这是一个关于对话框')
+            QMessageBox.about(self,'关于','这是一个关于对话框')      
+            # 源代码def information(self, QWidget, p_str, p_str_1，....），本代码中的self为父窗口， 即QWidget类型
         elif text == '显示消息对话框':
             reply = QMessageBox.information(self,'消息','这是一个消息对话框', QMessageBox.Yes | QMessageBox.No,QMessageBox.Yes)
             print(reply == QMessageBox.Yes)
