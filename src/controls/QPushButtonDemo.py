@@ -1,5 +1,5 @@
 '''
-
+相关解读：https://www.jb51.net/article/181612.htm
 按钮控件（QPushButton）
 
 父类：QAbstractButton
