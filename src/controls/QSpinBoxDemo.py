@@ -34,13 +34,13 @@ class QSpinBoxDemo(QWidget):
         self.sb.valueChanged.connect(self.valueChange)
         self.setLayout(layout)
 
-    def valueChange(self):
+    def valueChange(self): 
         self.label.setText('当前值：' + str(self.sb.value()))
         
     """
     或者
     def valueChange(self, num):
-        self.label.setText('当前值：'+ str(num))          # valueChanged.connect传递给槽的是 str型
+        self.label.setText('当前值：'+ str(num))          # valueChanged.connect传递给槽的是 str型 
     
     """
     """
