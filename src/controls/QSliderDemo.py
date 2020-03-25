@@ -71,6 +71,17 @@ class QSliderDemo(QWidget):
         print('当前值：%s' % self.sender().value())
         size = self.sender().value()
         self.label.setFont(QFont('Arial',size))
+        
+        
+    """
+    def valueChange(self, size):
+        print('当前值：%d' % int(size))
+        self.label.setFont(QFont('Arial', size))
+        
+        
+        则self.slider1.valueChanged.connect(self.valueChange)改成  self.slider1.valueChanged.connect(lambda size: self.valueChange(size))
+    
+    """
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     main = QSliderDemo()
