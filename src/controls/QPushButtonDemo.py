@@ -50,7 +50,8 @@ class QPushButtonDemo(QDialog) :
 
         self.button4 = QPushButton('&MyButton')
         self.button4.setDefault(True)                                        # 此属性确认按钮是否为默认按钮，如果按钮被设置为默认按钮，当按下回车键时，此属性设置为True的按钮（即对话框的默认按钮）将自动被按下。
-        self.button4.clicked.connect(lambda:self.whichButton(self.button4))   # 设置默认按钮https://blog.csdn.net/LaoYuanPython/article/details/102904862
+        self.button4.clicked.connect(lambda:self.whichButton(self.button4))   # 还可以通过lambda表达式来传递额外的参数btn，将clicked信号发送给槽函数whichButton（）
+        # self.button4.clicked.connect(lambda button:self.whichButton(self.button4))    # lamdba 后面的button没有作用,可以忽略
         layout.addWidget(self.button4)
 
         self.setLayout(layout)
@@ -64,8 +65,18 @@ class QPushButtonDemo(QDialog) :
 
     def whichButton(self,btn):
         print('被单击的按钮是<' + btn.text() + '>') 
-
-  
+        
+    """  
+    def buttonState(self, button):
+        if button.isChecked():
+            print(button.text() + '已经被选中')
+        else:
+            print(button.text() + '未被选中')
+            
+            
+           则，可以改为 self.button1.clicked.connect(lambda :self.buttonState(self.button1))
+   
+  """
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     main = QPushButtonDemo()
