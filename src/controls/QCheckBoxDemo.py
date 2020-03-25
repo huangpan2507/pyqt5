@@ -39,8 +39,8 @@ class QCheckBoxDemo(QWidget):
 
         self.checkBox3 = QCheckBox('半选中')
         self.checkBox3.stateChanged.connect(lambda:self.checkboxState(self.checkBox3))
-        self.checkBox3.setTristate(True)
-        self.checkBox3.setCheckState(Qt.PartiallyChecked)
+        self.checkBox3.setTristate(True)                               #设置半选中
+        self.checkBox3.setCheckState(Qt.PartiallyChecked)              # 设置半选中
         layout.addWidget(self.checkBox3)
 
         self.setLayout(layout)
