@@ -65,7 +65,7 @@ class QPushButtonDemo(QDialog) :
     def whichButton(self,btn):
         print('被单击的按钮是<' + btn.text() + '>') 
 
-
+  
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     main = QPushButtonDemo()
