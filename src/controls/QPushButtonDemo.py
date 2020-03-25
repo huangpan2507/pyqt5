@@ -63,7 +63,7 @@ class QPushButtonDemo(QDialog) :
             print('按钮1未被选中')
 
     def whichButton(self,btn):
-        print('被单击的按钮是<' + btn.text() + '>')
+        print('被单击的按钮是<' + btn.text() + '>') 
 
 
 if __name__ == '__main__':
