@@ -44,6 +44,7 @@ class QDialogDemo(QMainWindow):
         # Qt.ApplicationModal： Qt.ApplicationModal：应用程序模态，阻止和任何其他窗口进行交互，用户只有关闭弹窗后，才能关闭主界面
         # Qt.WindowModal:窗口模态，程序在未处理玩当前对话框时，将阻止和对话框的父窗口进行交互，可以直接关闭主界面，而不用先关闭弹窗
         # Qt.NonModal：非模态，可以和程序的其他窗口进行交互，用户只有关闭弹窗后，才能关闭主界面
+        # 模态对话框（Modal Dialogue Box），一旦弹出，就不能对话框以外的窗口进行操作，必须先关闭对话框。
 
         dialog.exec()
 
