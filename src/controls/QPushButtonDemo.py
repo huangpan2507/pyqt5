@@ -1,5 +1,6 @@
 '''
-相关解读：https://www.jb51.net/article/181612.htm
+相关解读：                    https://www.jb51.net/article/181612.htm
+关于信号与槽连接传递额外参数： http://www.imooc.com/wenda/detail/584213
 按钮控件（QPushButton）
 
 父类：QAbstractButton
@@ -51,7 +52,11 @@ class QPushButtonDemo(QDialog) :
         self.button4 = QPushButton('&MyButton')
         self.button4.setDefault(True)                                        # 此属性确认按钮是否为默认按钮，如果按钮被设置为默认按钮，当按下回车键时，此属性设置为True的按钮（即对话框的默认按钮）将自动被按下。
         self.button4.clicked.connect(lambda:self.whichButton(self.button4))   # 还可以通过lambda表达式来传递额外的参数btn，将clicked信号发送给槽函数whichButton（）
-        # self.button4.clicked.connect(lambda button:self.whichButton(self.button4))    # lamdba 后面的button没有作用,可以忽略
+        
+        # 信号-槽机制只是指定信号如何连接到槽，信号定义的参数被传递给槽，而额外的参数（用户定义，如self.button4）不能直接传递。
+        # QPushButton.clicked信号发射指示按钮状态的参数。连接到lambda插槽，指定的可选参数button将被按钮的状态（True False）覆盖。所以，可以将lambda 参数空在那里，或者随便找个参数接收按钮状态，但不传给槽。
+        # self.button4.clicked.connect(lambda button:self.whichButton(button))  ==》lambda :self.whichButton(button) 或者 lambda statue :self.whichButton(button)
+        
         layout.addWidget(self.button4)
 
         self.setLayout(layout)
