@@ -79,7 +79,7 @@ class QSliderDemo(QWidget):
         self.label.setFont(QFont('Arial', size))
         
         
-        则self.slider1.valueChanged.connect(self.valueChange)改成  self.slider1.valueChanged.connect(lambda size: self.valueChange(size))
+        则self.slider1.valueChanged.connect(self.valueChange)不改 或者改成  self.slider1.valueChanged.connect(lambda size: self.valueChange(size))
     
     """
 if __name__ == '__main__':
