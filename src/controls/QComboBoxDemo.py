@@ -32,6 +32,8 @@ class QComboBoxDemo(QWidget):
         self.cb.addItems(['Java','C#','Ruby'])
 
         self.cb.currentIndexChanged.connect(self.selectionChange)
+        # self.cb.currentIndexChanged.connect(lambda idx: self.selectionChange(idx))  # 同样的作用， self.cb.currentIndexChanged 会传回一个idx索引， 让lambda接收
+
 
         layout.addWidget(self.label)
         layout.addWidget(self.cb)
