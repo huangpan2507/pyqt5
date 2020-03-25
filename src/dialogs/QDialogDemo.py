@@ -47,6 +47,7 @@ class QDialogDemo(QMainWindow):
         # 模态对话框（Modal Dialogue Box），一旦弹出，就不能对话框以外的窗口进行操作，必须先关闭对话框。
 
         dialog.exec()
+        # 根据exec_()方法的返回值判断用户是【确定】还是【取消】了，当然也可以其他返回值，具体看文档。
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
