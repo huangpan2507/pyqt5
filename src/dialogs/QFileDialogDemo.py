@@ -47,6 +47,12 @@ class QFileDialogDemo(QWidget):
         dialog = QFileDialog()
         dialog.setFileMode(QFileDialog.AnyFile)
         dialog.setFilter(QDir.Files)
+        
+        #　exec():显示一个模式对话框，并且锁住程序直到用户关闭该对话框为止。函数返回一个DialogCode结果（int型）。打开返回1  取消返回 0
+        # 在对话框弹出期间，用户不可以切换同程序下的其它窗口，直到该对话框被关闭。
+        # 模式与非模式 。模式对话框，就是在弹出窗口的时候，整个程序就被锁定了，处于等待状态，直到对话框被关闭。
+        # 这时往往是需要对话框的返回值进行下面的操作。如：确认窗口（选择“是”或“否”）。
+        # 非模式对话框，在调用弹出窗口之后，调用即刻返回，继续下面的操作。这里只是一个调用指令的发出，不等待也不做任何处理。如：查找框。
 
         if dialog.exec():
             filenames = dialog.selectedFiles()
