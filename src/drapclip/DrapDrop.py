@@ -23,6 +23,7 @@ class MyComboBox(QComboBox) :
         self.setAcceptDrops(True)
     def dragEnterEvent(self,e):
         print(e)
+        #检测拖曳进来的数据是否包含文本，如有则接受，无则忽略
         if e.mimeData().hasText():
             e.accept()
         else:
