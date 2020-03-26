@@ -27,7 +27,7 @@ class QFontDialogDemo(QWidget):
 
         self.setLayout(layout)
     def getFont(self):
-        font, ok = QFontDialog.getFont()
+        font, ok = QFontDialog.getFont()    # 返回字体及ok 是否按下
         if ok :
             self.fontLabel.setFont(font)
 
