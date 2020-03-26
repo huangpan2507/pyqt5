@@ -55,9 +55,10 @@ class QFileDialogDemo(QWidget):
         # 非模式对话框，在调用弹出窗口之后，调用即刻返回，继续下面的操作。这里只是一个调用指令的发出，不等待也不做任何处理。如：查找框。
 
         if dialog.exec():
-            filenames = dialog.selectedFiles()
+            filenames = dialog.selectedFiles()              # filenames为返回的地址
+            
             f = open(filenames[0],encoding='utf-8',mode='r')
-            with f:
+            with f:                                         # with open 自带close()方法
                 data = f.read()
                 self.contents.setText(data)
 
