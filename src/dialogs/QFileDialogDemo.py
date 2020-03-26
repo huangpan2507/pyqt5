@@ -1,4 +1,5 @@
 '''
+代码分析博客： https://www.jb51.net/article/181511.htm
 
 文件对话框：QFileDialog
 
@@ -33,7 +34,13 @@ class QFileDialogDemo(QWidget):
         self.setWindowTitle('文件对话框演示 ')
 
     def loadImage(self):
-        fname,_ = QFileDialog.getOpenFileName(self,'打开文件','.','图像文件(*.jpg *.png)')
+        
+        # 第一个参数self：用于指定父组件
+        # 第二个参数‘open file’：是QFileDialog对话框的标题
+        # 第三个参数‘C:\’默认打开的目录，‘.’代表程序运行的目录，‘/’代表当前盘下的根目录(window.linux系统),需要注意的是不同路径的显示方式，比如window平台下的C盘“C:\”等
+        # 第四个参数是对话框中文件扩展名过滤器（fliter）,比如使用’Image files (.jpg .gif .png .jpeg)’表示只能显示扩展名为.jpg,.gif等文件
+        
+        fname,_ = QFileDialog.getOpenFileName(self,'打开文件','.','图像文件(*.jpg *.png)')    
         self.imageLabel.setPixmap(QPixmap(fname))
 
     def loadText(self):
