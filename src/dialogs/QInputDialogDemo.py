@@ -1,5 +1,7 @@
 '''
-
+代码分析博客：https://www.jb51.net/article/181509.htm
+QInputDialog控件是一个标准对话框，有一个文本框和两个按钮（ok和cancel）组成，当用户单击ok或enter键后，在父窗口可以收集通过QInputDialog控件输入
+的信息，QInputDialog控件是QDialog标准对话框的一部分。在QInpuTDialog控件中可以输入数字，字符串或列表中的选项，标签用于提示必要的信息
 输入对话框：QInputDialog
 
 QInputDialog.getItem
@@ -40,6 +42,13 @@ class QInputDialogDemo(QWidget):
 
     def getItem(self):
         items = ('C','C++','Ruby','Python','Java')
+       
+        #获取item输入的值，以及ok键的点击与否（True 或False）
+        #QInputDialog.getItem(self,标题,文本,元组,元组默认index,是否允许更改)
+        #　当调用QInputDialog.getItem（）函数时，QInputDialog控件包含一个QComboBox控件和两个按钮，用户从QComboBox中选择一个选项后，
+        # 允许用户确认或取消操作
+       
+        
         item, ok =QInputDialog.getItem(self,'请选择编程语言','语言列表',items)
         if ok and item:
             self.lineEdit1.setText(item)
