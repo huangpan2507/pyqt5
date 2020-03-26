@@ -1,4 +1,5 @@
 '''
+代码分析博客： https://www.jb51.net/article/181522.htm
 让控件支持拖拽动作
 A.setDragEnabled(True)
 
