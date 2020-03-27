@@ -22,6 +22,9 @@ class StatusBar(QMainWindow) :
         file.addAction("show")
         file.triggered.connect(self.processTrigger)
         self.setCentralWidget(QTextEdit())
+        
+        # 实例化状态栏
+        # 设置状态栏，类似布局设置
         self.statusBar = QStatusBar()
         self.setStatusBar(self.statusBar)
 
