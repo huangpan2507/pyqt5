@@ -1,4 +1,8 @@
 '''
+在通常情况下，一个应用需要和一批数据进行交互，然后以表格的形式输出这些信息，这时就需要用到QTableView类了，在QTableView中可以使用自定义的数据模型
+来显示内容，通过setModel来绑定数据源
+QTableWidget继承自QTableView，主要区别是QTableView可以使用自定义的数据模型来显示内容（先通setModel来绑定数据源），而QTableWidget自能使用标准
+的数据模型，并且其单元格数据是通过QTableWidgetItem对象实现的，通常QTableWidget就能够满足我们的要求。
 
 显示二维表数据（QTableView控件）
 
